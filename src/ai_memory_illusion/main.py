@@ -29,32 +29,34 @@ def main():
 
     # Run with this line commented and uncommented to see the effect of the stateless
     # LLM calls.
-    # memory.append({"role": "user", "content": "Hi! I'm Bianca!"})
+    # memory.append({"role": "user", "content": "Hi! I'm <your_name>!"})
 
     response = client.chat.completions.create(model=MODEL, messages=memory)
 
     renderer.render(response.choices[0].message.content)
 
+    memory.append({"role": "assistent", "content": response.choices[0].message.content})
     memory.append({"role": "user", "content": "Could you tell me an interesting fact?"})
 
     response = client.chat.completions.create(model=MODEL, messages=memory)
 
     renderer.render(response.choices[0].message.content)
 
+    memory.append({"role": "assistent", "content": response.choices[0].message.content})
     memory.append({"role": "user", "content": "Could you tell me another one?"})
 
     response = client.chat.completions.create(model=MODEL, messages=memory)
 
     renderer.render(response.choices[0].message.content)
 
+    memory.append({"role": "assistent", "content": response.choices[0].message.content})
     memory.append({"role": "user", "content": "What is my name?"})
 
     response = client.chat.completions.create(model=MODEL, messages=memory)
-
+    
     renderer.render(response.choices[0].message.content)
 
     renderer.finalize()
-
 
 if __name__ == "__main__":
     main()
