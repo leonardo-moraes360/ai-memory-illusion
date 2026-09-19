@@ -29,7 +29,7 @@ def main():
 
     # Run with this line commented and uncommented to see the effect of the stateless
     # LLM calls.
-    # memory.append({"role": "user", "content": "Hi! I'm <your_name>!"})
+    # memory.append({"role": "user", "content": "Hi! I'm Bianca!"})
 
     response = client.chat.completions.create(model=MODEL, messages=memory)
 

@@ -1,6 +1,10 @@
-# AI Summarization
+# AI Memory Illusion
 
-Simple AI summarization application to learn how to make API calls to local or remote LLMs. The summarization content is rendered as simple markdown.
+Simple AI python script that shows how calls to LLM are stateless, that is, they do not hold proper `memory` of the conversation. That must be handled by the application code.
+
+On the first call uncomment the line that add the user name to the chat and run the script. The LLM will infer the user name from the accumulated context window that always is provided when calling the API.
+
+On the second call, keep it commented and run the script. The LLM will not be able to infer the user name from the accumulated context window.
 
 ## Setup
 
@@ -21,4 +25,8 @@ Simple AI summarization application to learn how to make API calls to local or r
 
 Example of response:
 
-![CLI Terminal](./assets/image.png)
+**With Memory**
+![CLI Terminal](./assets/with-memory.png)
+
+**Without Memory**
+![CLI Terminal](./assets/without-memory.png)
