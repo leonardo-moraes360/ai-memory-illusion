@@ -7,7 +7,10 @@ authors = [
     { name = "leonardo-moraes360", email = "leogm360.work@proton.me" }
 ]
 requires-python = ">=3.13"
-dependencies = []
+dependencies = [
+    "markrender>=1.0.7",
+    "openai>=3.14.1",
+]
 
 [project.scripts]
 ai-memory-illusion = "ai_memory_illusion:main"

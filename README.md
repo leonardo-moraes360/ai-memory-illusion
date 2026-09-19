@@ -17,7 +17,7 @@ Simple AI summarization application to learn how to make API calls to local or r
 
 ## Use
 
-1. Run `uv run --env-file=.env src/ai_summarization/main.py`.
+1. Run `uv run --env-file=.env src/ai_memory_illusion/main.py`.
 
 Example of response:
 
